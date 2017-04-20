@@ -1,0 +1,1 @@
+Neues Hotel in guter Lage   showReview(16599656, 'full');

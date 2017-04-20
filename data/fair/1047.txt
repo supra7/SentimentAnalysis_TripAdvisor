@@ -1,0 +1,1 @@
+Schnes Hotel, aber der Service pat eher zu drei Sternen   showReview(20638208, 'full');

@@ -1,0 +1,1 @@
+In diesem Hotel wird geklaut!   showReview(20309795, 'full');

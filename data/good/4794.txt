@@ -1,0 +1,1 @@
+Hotel Amed - ein Urgestein   showReview(21568556, 'full');

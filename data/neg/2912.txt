@@ -1,0 +1,1 @@
+Hotel moyen   showReview(22263183, 'full');

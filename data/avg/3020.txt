@@ -1,0 +1,1 @@
+Hotel molto distante da...   showReview(21662709, 'full');

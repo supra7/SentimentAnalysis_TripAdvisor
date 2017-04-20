@@ -1,0 +1,1 @@
+El peor hotel de mi vida   showReview(19077668, 'full');

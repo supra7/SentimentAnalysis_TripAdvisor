@@ -1,0 +1,1 @@
+Bonjour,cet hotel est...   showReview(19189672, 'full');
