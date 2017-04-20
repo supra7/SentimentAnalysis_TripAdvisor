@@ -5,6 +5,9 @@ import math
 import operator
 import nltk
 import re
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
 
 class NaiveBayes:
   class TrainSplit:
@@ -173,6 +176,8 @@ def test10Fold(trainDir):
   splits = nb.crossValidationSplits(trainDir)
   avgAccuracy = 0.0
   fold = 0
+  guesses = []
+  klasses = []
   for split in splits:
     classifier = NaiveBayes()
     accuracy = 0.0
@@ -183,16 +188,24 @@ def test10Fold(trainDir):
     for example in split.test:
       words = example.words
       guess = classifier.classify(words)
+      if fold==0:
+        guesses.append(guess)
+        klasses.append(example.klass)
       if example.klass == guess:
         accuracy += 1.0
 
     accuracy = accuracy / len(split.test)
     avgAccuracy += accuracy
     print '[INFO]\tFold %d Accuracy: %f' % (fold, accuracy) 
+
     fold += 1
   avgAccuracy = avgAccuracy / fold
   print '[INFO]\tAccuracy: %f' % avgAccuracy
-    
+  print('Confusion Matrix : ')
+  print confusion_matrix(klasses, guesses)
+  print('Classification Report :')
+  print classification_report(klasses, guesses) 
+
 def main(trainDir):
   test10Fold(trainDir)
 
